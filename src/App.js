@@ -1,5 +1,5 @@
-import Login from './components/Login';
-import Signup from './components/Signup';
+// import Login from './components/Login';
+import Form from './components/Form';
 import './App.css';
 
 var userIsRegistered = false;
@@ -9,7 +9,9 @@ function App() {
   return (
     <div className='container'>
       {/* {isLoggedIn ? <h1>Hello</h1> : <Login />} */}
-      {userIsRegistered ? <Login /> : <Signup />}
+      <Form 
+        isRegistered = {userIsRegistered}
+      />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import Input from './Input';
 
-function Signup () {
+function Form ({ isRegistered }) {
     return (
         <form className="form">
             <Input 
@@ -11,13 +11,10 @@ function Signup () {
                 type = "password"
                 placeholder = "Password"
             />
-            <Input 
-                type = "password"
-                placeholder = "Confirm Password"
-            />
-            <button type="submit">Register</button>
+            {isRegistered === false && <Input type = "password" placeholder = "Confirm Password" />}
+            <button type="submit">{isRegistered ? "Login" : "Register"}</button>
         </form>
     );
 }
 
-export default Signup;
+export default Form;

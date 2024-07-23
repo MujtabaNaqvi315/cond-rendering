@@ -11,7 +11,7 @@ function Form ({ isRegistered }) {
                 type = "password"
                 placeholder = "Password"
             />
-            {isRegistered === false && <Input type = "password" placeholder = "Confirm Password" />}
+            {!isRegistered && <Input type = "password" placeholder = "Confirm Password" />}
             <button type="submit">{isRegistered ? "Login" : "Register"}</button>
         </form>
     );

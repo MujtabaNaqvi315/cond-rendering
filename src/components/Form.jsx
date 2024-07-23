@@ -25,7 +25,17 @@ function Form ({ isRegistered, headingText, handleClick }) {
                 placeholder = "Password"
             />
             {!isRegistered && <Input type = "password" placeholder = "Confirm Password" />}
-            <button  onClick={handleClick} style={background} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} type="submit">{isRegistered ? "Login" : "Register"}</button>
+            
+            <button 
+              style={background} 
+              onClick={handleClick} 
+              onMouseOver={handleMouseOver} 
+              onMouseOut={handleMouseOut} 
+              type="submit">
+                
+                {isRegistered ? "Login" : "Register"}
+            
+            </button>
         </form>
     );
 }

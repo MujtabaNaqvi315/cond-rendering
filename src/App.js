@@ -1,22 +1,15 @@
 import Login from './components/Login';
+import Signup from './components/Signup';
 import './App.css';
 
-var isLoggedIn = false;
-
-function renderConditionally () {
-  if (isLoggedIn === true) {
-    return <h1>Hello</h1> ;
-  } else {
-    return (
-      <Login />
-    );
-  }
-}
+var userIsRegistered = false;
+// var isLoggedIn = false;
 
 function App() {
   return (
     <div className='container'>
-      {renderConditionally()}
+      {/* {isLoggedIn ? <h1>Hello</h1> : <Login />} */}
+      {userIsRegistered ? <Login /> : <Signup />}
     </div>
   );
 }
